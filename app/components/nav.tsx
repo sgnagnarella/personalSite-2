@@ -7,7 +7,7 @@ const navItems = {
   '/blog': {
     name: 'blog',
   },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
+  'https://firebase.google.com/docs/app-hosting': {
     name: 'deploy',
   },
 }
