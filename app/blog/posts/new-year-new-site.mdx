@@ -1,0 +1,39 @@
+---
+title: 'New Year, New Site'
+publishedAt: '2024-12-16'
+summary: 'Launching a new personal site as we head into a new year.'
+---
+
+I've own the gnagnarella.me domain for some time with the aspirtion of hosting my personal website and maybe do some monthly posts. Initially I hosted a Wordpress site, but I never put much effort into it. 
+
+But with the new year it comes new goals. So here I am starting fresh.
+
+This first post is about the site itself.
+
+## What was I looking for?
+This time around I was going for a very clean an minimalistic style running on a stack that would allow me to test some of the latest and greatest [Firebase](https://firebase.google.com) features and that would gave me the ability to quickly(-ish) write posts using [Markdown](https://en.wikipedia.org/wiki/Markdown) .
+
+I knew I wanted to try something in NextJS I did what every person would do before starting a new project... I [Googled ](https://www.google.com/search?q=best+nextjs+blog+template&oq=nextjs+best). Which led me to two places:
+1. [# Top 15 Next.js Blog Starter Templates in 2024](https://prismic.io/blog/nextjs-blog-templates) where I got some inspiration.
+2. And Vercel's Blog templates and starters where I ended up picking the [Portfolio Started Kit](https://github.com/vercel/examples/tree/main/solutions/blog) one.
+
+This template gives me a lightweight starting point I can then expand from while offering a few features I liked of the bat:
+
+**Features**
+- Data published
+- Supports markdown
+- Author page
+- RSS
+
+**Tech Stack**
+- Next.js
+- Tailwind CSS
+- TypeScript
+
+## Deploying in Firebase App Hosting
+
+Once I managed to update and clean some of the NextJS and TailwindCSS dependencies, the deployment to Firebase App Hosting was fairly simple. 
+1. Fork [my repo](https://github.com/sgnagnarella/personalSite-2).
+2. If you don't have an account already, sign up to [Firebase](https://firebase.google.com).
+3. Configure [Firebase App Hosting (FAH)](https://firebase.google.com/docs/app-hosting). A few notes on this step:
+	- You will have to provide a credit card: A credit card is needed for things such as Cloud Run, Cloud Build, and App Hosting itself. You will not be charged as far as you remain under the free tier for those products. You can learn more about FAH's pricing [here](https://firebase.google.com/docs/app-hosting/costs).
