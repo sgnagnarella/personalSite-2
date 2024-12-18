@@ -1,18 +1,27 @@
 "use client"
 
 // import { faMoon } from "@fortawesome/free-regular-svg-icons";
-import React from "react";
+import React, { useEffect }  from "react";
 import { IoMoon } from "react-icons/io5";
 import { IoSunny } from "react-icons/io5";
-import { IconContext } from "react-icons";
 
 export function ThemeToggle(){
   const [dark, setDark] = React.useState(false);
 
+  useEffect(() => {
+    const storedDarkMode = localStorage.getItem('darkMode') === 'true';
+    setDark(storedDarkMode);
+    if (storedDarkMode) {
+      document.body.classList.add('dark');
+    }
+  }, []);
+
   const darkModeHandler = () => {
-      setDark(!dark);
-      document.body.classList.toggle("dark");
-  }
+    const newDarkMode = !dark;
+    setDark(newDarkMode);
+    document.body.classList.toggle('dark');
+    localStorage.setItem('darkMode', newDarkMode.toString());
+  };
   
   return(
       <button onClick={()=> darkModeHandler()}>
