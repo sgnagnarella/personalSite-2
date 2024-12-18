@@ -11,11 +11,15 @@ export async function generateStaticParams() {
   }))
 }
 
-export function generateMetadata({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
-  if (!post) {
-    return
-  }
+export async function generateMetadata({ params }) {
+  const { slug } = await params; // Await params once and destructure slug
+
+  let post = getBlogPosts().find((post) => post.slug === slug);
+  // Use the resolved slug directly
+
+    if (!post) {
+        return;
+    }
 
   let {
     title,
